@@ -38,7 +38,7 @@ project-root/
 
 노트북: `notebooks/Random_forest_copy_2.ipynb`
 
-![1차 결과](./285b2346-94a3-4632-9149-421a3db26398.png)
+![1차 결과](./images/result1.png)
 
 - `RandomForestClassifier`를 기반으로 모델을 학습하고 최적 하이퍼파라미터를 탐색
 - 학습 데이터에서 높은 ROC-AUC(0.96) 성능 기록
@@ -49,12 +49,12 @@ project-root/
 ## 🧩 4. 1차 결과 문제점 분석
 
 ### 🔁 문제 1: 중복된 Feature 간 영향
-![문제점1: 상관관계](./dc97c7df-efb0-44e4-9dc8-07715e41f36f.png)
+![문제점1: 상관관계](./images/heatmap.png)
 
 - 다수의 기상 관련 변수 간 상관계수가 높아 다중공선성 존재
 
 ### 🚫 문제 2: 영향력 낮은 Feature 포함
-![문제점2: 중요도](./ee4bd7d8-4825-46e0-aa7d-2c2930d82ea0.png)
+![문제점2: 중요도](./images/importance.png)
 
 - `Feature Importance` 결과에서 일부 피처는 기여도가 거의 없음
 
@@ -64,7 +64,7 @@ project-root/
 
 ## 📈 5. 피처 선택 및 2차 개선 결과
 
-![2차 결과: ROC 비교](./f6e6c857-6045-417e-a6c9-722778e81dca.png)
+![2차 결과: ROC 비교](./images/roc_compare.png)
 
 - 상관관계 및 중요도를 기준으로 주요 Feature만 재선택
 - `LGBMClassifier`와 RandomForest를 비교하여 성능 개선 시도
@@ -74,7 +74,7 @@ project-root/
 
 ## 🔁 6. 회고 및 모델 성능 한계
 
-![Confusion Matrix](./98b5a052-56e8-4ba0-8df2-eed49a83295a.png)
+![Confusion Matrix](./images/confusion_matrix.png)
 
 - Delay 클래스 데이터가 매우 많아 예측이 지연에 편향됨
 - 클래스 불균형으로 인해 Confusion Matrix에서도 Delay 중심 예측 확인
@@ -84,7 +84,7 @@ project-root/
 
 ## 💡 7. 인슈어테크 관점에서의 활용 가능성
 
-![인슈어테크](./a4bbc2ea-c512-436d-8c22-44aa7b0a3439.png)
+![인슈어테크](./images/insurtech.png)
 
 - 항공권 예약 시, 자동 보상 보험 상품 추가 제안
 - 머신러닝 예측을 기반으로 보험료를 책정하고, 지연 발생 시 자동 보상
